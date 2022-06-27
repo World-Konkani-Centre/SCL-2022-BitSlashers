@@ -10,3 +10,20 @@ def home(request):
 
 def about(request):
     return render(request, 'about.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def pricing(request):
+    return render(request, 'pricing.html')
+
+def sample(request):
+    return render(request, 'sample-inner-page.html')
+
+def service(request):
+    return render(request, 'services.html')
+
+def service_detail(request):
+    return render(request, 'service-details.html')
+
+

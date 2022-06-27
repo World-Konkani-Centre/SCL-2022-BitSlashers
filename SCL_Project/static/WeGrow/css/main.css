@@ -18,9 +18,9 @@
 
 /* Colors */
 :root {
-  --color-default: #0a0d13;
-  --color-primary: #0d42ff;
-  --color-secondary: #0e1d34;
+  --color-default: #152D10;
+  --color-primary: #1E710A;
+  --color-secondary: #4DAF35;
 }
 
 /* Smooth scroll behavior */
@@ -42,7 +42,7 @@ a {
 }
 
 a:hover {
-  color: #406aff;
+  color: #4E944F;
   text-decoration: none;
 }
 
@@ -75,7 +75,7 @@ section {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 0;
-  color: #001973;
+  color: #4DAF35;
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
@@ -215,7 +215,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: rgba(13, 66, 255, 0.8);
+  background: #1E710A;
   color: #fff;
 }
 
@@ -308,7 +308,7 @@ section {
 }
 
 .header.sticked {
-  background: rgba(14, 29, 52, 0.9);
+  background: #152D10;
   padding: 15px 0;
   box-shadow: 0px 2px 20px rgba(14, 29, 52, 0.1);
 }
@@ -386,7 +386,7 @@ section {
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
     color: #fff;
-    background: #2756ff;
+    background: #FFA456;
   }
 
   .navbar .dropdown ul {
@@ -531,7 +531,7 @@ section {
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
     color: #fff;
-    background: rgba(13, 66, 255, 0.8);
+    background-color: #4DAF35;
   }
 
   .navbar .dropdown ul,
@@ -818,7 +818,7 @@ section {
 }
 
 .services .card a {
-  color: #001973;
+  color: #4DAF35;
   transition: 0.3;
 }
 
@@ -901,7 +901,7 @@ section {
 .features .features-item h3 {
   font-weight: 600;
   font-size: 26px;
-  color: #001973;
+  color: #4DAF35;
 }
 
 .features .features-item ul {
@@ -1390,8 +1390,8 @@ section {
 }
 
 .horizontal-pricing .buy-btn:hover {
-  background: #406aff;
-  border-color: #406aff;
+  background: #4E944F;
+  border-color: #4E944F;
 }
 
 .horizontal-pricing .featured {
@@ -1807,10 +1807,11 @@ section {
 .hero form .btn-primary {
   background-color: var(--color-primary);
   padding: 15px 30px;
+  border: none;
 }
 
 .hero form .btn-primary:hover {
-  background-color: #2756ff;
+  background-color: #4DAF35;
 }
 
 .hero .stats-item {
