@@ -26,4 +26,7 @@ def service(request):
 def service_detail(request):
     return render(request, 'service-details.html')
 
+def add_store(request):
+    return render(request, 'get-a-quote.html')
+
 

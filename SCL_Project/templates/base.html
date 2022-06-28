@@ -53,10 +53,10 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about" class="active">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="{% url 'index' %}"Home</a></li>
+                    <li><a href="{% url 'about' %}" class="active">About</a></li>
+                    <li><a href="{% url 'service' %}">Services</a></li>
+                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Drop Down</span>
                             <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -80,7 +80,7 @@
                     </li>
                     <li><a href="contact.html">Contact</a></li>
                     <li>
-                        <a class="get-a-quote" href="get-a-quote.html">Get a Quote</a>
+                        <a class="get-a-quote" href="{% url 'store' %}">Get a Quote</a>
                     </li>
                 </ul>
             </nav>
