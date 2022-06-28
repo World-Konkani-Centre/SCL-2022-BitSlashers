@@ -1,1 +1,0 @@
-# SCL-2022-BitSlashers
