@@ -139,7 +139,7 @@ section {
 
 .breadcrumbs .page-header:before {
   content: "";
-  background-color: rgba(14, 29, 52, 0.8);
+  background-color: #4E944F;
   position: absolute;
   inset: 0;
 }
@@ -602,7 +602,7 @@ section {
 }
 
 .featured-services .service-item .icon i {
-  color: #001f8d;
+  color: #17590a;
   font-size: 48px;
   transition: 0.3s;
 }
@@ -655,7 +655,7 @@ section {
   font-weight: 700;
   font-size: 32px;
   font-family: var(--font-secondary);
-  color: #001f8d;
+  color: #4DAF35;
 }
 
 .about .content ul {
@@ -680,7 +680,7 @@ section {
 .about .content ul h5 {
   font-size: 18px;
   font-weight: 700;
-  color: #19335c;
+  color: #4DAF35;
 }
 
 .about .content ul p {
