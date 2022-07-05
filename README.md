@@ -10,11 +10,11 @@
   <p align="center">
     A single stop solution for fair crop trade
     <br />
-    <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md">View Demo</a>
+    <a href="">View Demo</a>
     ·
-    <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/issues">Report Bug</a>
+    <a href="">Report Bug</a>
     ·
-    <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/issues">Request Feature</a>
+    <a href="">Request Feature</a>
   </p>
 </p>
 
