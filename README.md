@@ -43,7 +43,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Hello, welcome to Coder Connect. Extremely glad you’re here. Have you ever been frustrated/discouraged while looking out for a bunch of aptitude questions? Were the level of questions not able to meet your expectations? Ever felt the need of an associate to discuss and clear your doubts? This portal has been designed to guide you through this strenuous journey and pave an easier path for the destination.
+Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed farmers bearing huge loss during crop trade due to lack of market knowledge and predominance of intermediaries. Hence we are a single stop solution where farmers meet consumers, aided with analytical insights and regular price visibility.
 
 ### Built With
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
