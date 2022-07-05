@@ -8,9 +8,7 @@
   <h3 align="center">Team-BitSlashers</h3>
 
   <p align="center">
-    A website to enhance your coding and aptitude abilities
-    <br />
-    <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    A single stop solution for fair crop trade
     <br />
     <br />
     <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md">View Demo</a>
