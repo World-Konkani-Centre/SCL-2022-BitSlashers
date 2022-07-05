@@ -2,14 +2,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md">
-    <img src="https://firebasestorage.googleapis.com/v0/b/ankuram-maxo-website.appspot.com/o/Project_Git%2FAnkuram%20Logo.png?alt=media&token=ac69eb50-5050-408c-a058-e1fcb11f2487" alt="Logo" width="150" height="150">
+<!--     <img src="https://firebasestorage.googleapis.com/v0/b/ankuram-maxo-website.appspot.com/o/Project_Git%2FAnkuram%20Logo.png?alt=media&token=ac69eb50-5050-408c-a058-e1fcb11f2487" alt="Logo" width="150" height="150"> -->
   </a>
 
   <h3 align="center">Team-BitSlashers</h3>
 
   <p align="center">
     A single stop solution for fair crop trade
-    <br />
     <br />
     <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md">View Demo</a>
     ·
