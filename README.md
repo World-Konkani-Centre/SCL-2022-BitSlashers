@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/blob/main/README.md">
-<!--     <img src="C:\Users\Keerthi Kamath\Desktop\SCL-2022-BitSlashers\SCL_Project\static\WeGrow\img\logo.png" alt="Logo" width="150" height="150"> -->
+    <img src="C:\Users\Keerthi Kamath\Desktop\SCL-2022-BitSlashers\SCL_Project\static\WeGrow\img\logo.png" alt="Logo" width="150" height="150">
   </a>
 
 
