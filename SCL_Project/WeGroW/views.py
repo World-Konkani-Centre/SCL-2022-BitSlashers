@@ -1,8 +1,10 @@
 from decimal import Context
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth import logout
+
 
 
 def home(request):
@@ -29,10 +31,6 @@ def service_detail(request):
 def add_store(request):
     return render(request, 'get-a-quote.html')
 
-def login(request):
-    return render(request, 'login.html')
 
-def signup(request):
-    return render(request, 'signup.html')
 
 
