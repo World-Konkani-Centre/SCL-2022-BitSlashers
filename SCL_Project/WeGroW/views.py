@@ -31,6 +31,17 @@ def service_detail(request):
 def add_store(request):
     return render(request, 'get-a-quote.html')
 
+def add_store(request):
+    return render(request, 'get-a-quote.html')
+
+def login(request):
+    return render(request, 'login.html')
+
+def signup(request):
+    return render(request, 'signup.html')
+
+
+
 
 
 
