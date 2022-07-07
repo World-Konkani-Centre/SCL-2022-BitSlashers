@@ -144,6 +144,7 @@ section {
   inset: 0;
 }
 
+
 .breadcrumbs .page-header h2 {
   font-size: 56px;
   font-weight: 500;
@@ -647,6 +648,8 @@ section {
 .featured-services .service-item:hover .icon i {
   color: var(--color-primary);
 }
+
+
 
 /*--------------------------------------------------------------
 # About Us Section
@@ -1429,7 +1432,7 @@ section {
 }
 
 .get-a-quote .php-email-form {
-  background: #f3f6fc;
+  background: rgb(220, 231, 216);
   padding: 40px;
   height: 100%;
 }
@@ -1532,7 +1535,7 @@ section {
 }
 
 .get-a-quote .php-email-form button[type=submit]:hover {
-  background: rgba(13, 66, 255, 0.8);
+  background: rgb(18, 73, 18);
 }
 
 @-webkit-keyframes animate-loading {

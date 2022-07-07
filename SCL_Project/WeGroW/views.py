@@ -31,8 +31,6 @@ def service_detail(request):
 def add_store(request):
     return render(request, 'get-a-quote.html')
 
-def my_logout(request):
-    logout(request)
-    return redirect('login')
+
 
 
