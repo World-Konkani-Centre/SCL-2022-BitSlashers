@@ -1670,7 +1670,7 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(13, 66, 255, 0.8);
+  background: #FFA456;
 }
 
 @keyframes animate-loading {
@@ -1965,4 +1965,10 @@ section {
 
 .footer .credits a {
   color: #fff;
+}
+
+.signup {
+  background: rgb(220, 231, 216);
+  padding: 50px;
+  height: 100%;
 }

@@ -18,18 +18,10 @@
         </div>
       </div>
     </div>
-    <nav>
-      <div class="container">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Store</li>
-        </ol>
-      </div>
-    </nav>
   </div><!-- End Breadcrumbs -->
 
   <!-- ======= Get a Quote Section ======= -->
-  <section id="create_store" class="create_store">
+  <section id="get-a-quote" class="get-a-quote">
     <div class="container" data-aos="fade-up">
 
       <div class="row g-0">
@@ -37,9 +29,11 @@
         <div class="col-lg-3 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div>
 
         <div class="col-lg-7">
-          <form action="forms/quote.php" method="post" class="php-email-form" >
+          <form action="forms/quote.php" method="post" class="php-email-form">
             <h3>Sell Product</h3>
-            <p><!--Discription --></p>
+            <p>
+              <!--Discription -->
+            </p>
             <div class="row gy-4">
 
               <div class="col-md-6">
@@ -65,7 +59,7 @@
               <div class="col-md-6 ">
                 <input type="Country" class="form-control" name="Country" placeholder="Country" required>
               </div>
-              
+
 
               <div class="col-md-6 ">
                 <input type="State" class="form-control" name="State" placeholder="State" required>
@@ -76,18 +70,17 @@
               </div>
 
               <div class="col-md-6">
-                <input type="" name="pin-code" placeholder="Pin-Code" maxlength="6" required>
+                <input type="" class="form-control" name="pin-code" placeholder="Pin-Code" maxlength="6" required>
               </div>
 
 
               <div class="col-md-12 text-center">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your quote request has been sent successfully. Thank you!</div>
+                <div class="error-message">Could not place offer! Try again!</div>
+                <div class="sent-message">Your offer has been successfully placed!</div>
 
-                <button type="submit">Submit</button>
+                <button type="submit">OFFER</button>
               </div>
-
             </div>
           </form>
         </div><!-- End Quote Form -->
