@@ -29,7 +29,7 @@ def service_detail(request):
     return render(request, 'service-details.html')
 
 def add_store(request):
-    return render(request, 'get-a-quote.html')
+    return render(request, 'create_store.html')
 
 def add_store(request):
     return render(request, 'get-a-quote.html')
