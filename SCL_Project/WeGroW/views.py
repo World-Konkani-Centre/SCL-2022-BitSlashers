@@ -35,4 +35,7 @@ def my_logout(request):
     logout(request)
     return redirect('login')
 
+def order_success(request):
+    return render(request, 'order_success.html')
+
 

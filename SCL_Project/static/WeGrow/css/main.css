@@ -1963,3 +1963,20 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+/*--------------------------------------------------------------
+# container Section
+--------------------------------------------------------------*/
+
+.container-order {
+
+ padding-top: 100px;
+  margin-top: 900px; /* Apply negative top and left margins to truly center the element */
+
+}
+  
+.fa{
+    color:#4DAF35;
+
+    }
+
