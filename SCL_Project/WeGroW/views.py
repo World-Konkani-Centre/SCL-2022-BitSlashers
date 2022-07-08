@@ -3,10 +3,10 @@ from django.shortcuts import redirect, render
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
 
-
+# @login_required
 def home(request):
     return render(request, 'index.html')
 
@@ -31,8 +31,6 @@ def service_detail(request):
 def add_store(request):
     return render(request, 'create_store.html')
 
-def add_store(request):
-    return render(request, 'get-a-quote.html')
 
 def login(request):
     return render(request, 'login.html')
