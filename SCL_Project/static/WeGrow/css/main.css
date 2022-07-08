@@ -1964,19 +1964,25 @@ section {
   color: #fff;
 }
 
+ 
 /*--------------------------------------------------------------
 # container Section
 --------------------------------------------------------------*/
 
-.container-order {
+.container-order{
 
  padding-top: 100px;
   margin-top: 900px; /* Apply negative top and left margins to truly center the element */
-
+background-color: white;
 }
   
-.fa{
-    color:#4DAF35;
+.fa-circle-check {
+    color:#4DAF35
+    
 
     }
+
+h1{
+  color:#4DAF35;
+}
 
