@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  
+    .pass-link a{
+
+padding-left: 75%;
+
+    }
+</style>
+<section id="get-a-quote" class="get-a-quote">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row g-0 band" >
+
+        <!-- <div class="col-lg-5 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div> -->
+
+        <div class="col-lg-7" >
+          <form action="forms/quote.php" method="post" class="php-email-form">
+            <h1>LOGIN</h1>
+            
+            <div class="row gy-4">
+
+              
+
+              
+
+              
+
+              <div class="col-md-12">
+                <input type="text" name="name" class="form-control" placeholder="Name" required>
+              </div>
+
+              <div class="col-md-12 ">
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
+              </div>
+
+              
+              
+              <div class="col-md-12">
+                <input type="text" name="form-control" class="form-control" placeholder="Password" required>
+              </div>
+
+              <div class="content">
+                <!-- <div class="checkbox">
+                  <input type="checkbox" id="remember-me">
+                  <label for="remember-me">Remember me</label>
+                </div> -->
+                
+                <div class="pass-link">
+                    
+                     <a href="#">Forgot password?</a></div>
+                    </div>
+
+                    <div class="signup-link">
+                        Not a member? <a href="#">Signup now</a></div>
+              
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Login Successfull!</div>
+
+                <button type="submit">LOGIN</button>
+              </div>
+
+            </div>
+          </form>
+        </div><!-- End Quote Form -->
+
+      </div>
+
+    </div>
+  </section><!-- End Get a Quote Section -->
+
+
+
+{% endblock content %}

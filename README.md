@@ -1,20 +1,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Karthik-Shenoy/Team-Ankuram-maxo/blob/main/README.md">
-<!--     <img src="https://firebasestorage.googleapis.com/v0/b/ankuram-maxo-website.appspot.com/o/Project_Git%2FAnkuram%20Logo.png?alt=media&token=ac69eb50-5050-408c-a058-e1fcb11f2487" alt="Logo" width="150" height="150"> -->
+  <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/blob/main/README.md">
+    <img src="https://i.ibb.co/0F8YbrS/logo.png" alt="Logo" width="250" height="250">
   </a>
 
-  <h3 align="center">Team-BitSlashers</h3>
+
+  <h3 align="center">WeGroW</h3>
 
   <p align="center">
     A single stop solution for fair crop trade
+    <br/>
+    By Team-BitSlashers
     <br />
-    <a href="">View Demo</a>
+    <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/blob/main/README.md">View Demo</a>
     ·
-    <a href="">Report Bug</a>
+    <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/issues">Report Bug</a>
     ·
-    <a href="">Request Feature</a>
+    <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/issues">Request Feature</a>
   </p>
 </p>
 
@@ -63,7 +66,7 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
 
 1. Fork and Clone
     <ol>
-    <li>Fork the Team-Ankuram-maxo Repo</li>
+    <li>Fork the SCL-2022-BitSlashers Repo</li>
     <li>Clone the repo to you computer.</li>
     </ol>
 
