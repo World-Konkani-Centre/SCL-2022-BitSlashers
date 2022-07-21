@@ -35,4 +35,5 @@ def login(request):
 def signup(request):
     return render(request, 'signup.html')
 
-
+def buyer(request):
+    return render(request, 'buyer.html')
