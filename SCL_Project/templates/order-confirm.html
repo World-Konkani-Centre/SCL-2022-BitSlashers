@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>Confirmation</h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div><!-- End Breadcrumbs -->
+   
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+
+    
+  
+        <table >
+         <tr class="head">
+          
+                <th><h2>Product</h2></th>
+               <th><h2>Quantity</h2></th>
+                <th><h2><right>Subtotal</right></h2></th>
+              
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="rice.jpg">
+                        <div>
+                            <p><h3>Rice</h3></p>
+                            <small>price:$50.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="wheat.jpg">
+                        <div>
+                            <p><h3>Wheat</h3></p>
+                            <small>price:$75.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$75.00</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cart-info">
+                        <img src="barley.jpg">
+                        <div>
+                            <p><h3>Barley</h3></p>
+                            <small>price:$100.00</small><br>
+                            <a href="">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$100.00</td>
+            </tr>
+        </table>
+        <div class="total-price">
+            <table>
+                <tr>
+                <td><h3>Subtotal</h3></td>
+                <td>$500.00</td>
+                </tr>
+                <tr>
+                    <td><h3>Tax</h3></td>
+                    <td>$35.00</td>
+                    </tr>
+                    <tr>
+                        <td><h3>Total</h3></td>
+                        <td>$789.00</td>
+                        </tr>
+                       <tr>
+                        <td><h3>Address</h3></td>
+                        <td><input type="text"></td>
+                       </tr>
+                       <tr>
+                        <td>
+                           
+                            {% comment %} <div class="text-center">
+                                <a href="#" class="confirm-btn">
+                                    <h4>CONFIRM</h4>
+                                </a>
+                            </div> {% endcomment %}
+                            <button type="submit" class="buy-btn">OFFER</button>
+    
+                       </td>
+                       </tr>
+            </table>
+        </div>
+        
+    </div>
+</section>
+
+
+</main><!-- End #main -->
+{% endblock content %}
