@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<style>
+  body {
+    /* background: #eee; */
+    font-family: 'Lily Script One';
+   overflow-x: hidden; /* Hide horizontal scrollbar */
+  }
+  
+  .card {
+    /* position: absolute; */
+    top: 20px;
+    /* left: 50px; */
+    width: 300px;
+    height: 500px;
+    margin: 100px;
+    /* float: left; */
+    perspective: 500px;
+    border:2px solid green;
+   
+   
+  }
+  
+  .content {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  
+    transition: transform 3s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .content {
+    transform: rotateY( 180deg ) ;
+    transition: transform 1s;
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: white; */
+    line-height: 300px;
+    
+    text-align: center;
+    font-size: 60px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  
+  .back {
+    /* background: white; */
+    /* color: white; */
+    transform: rotateY( 180deg );
+  }
+  
+  h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 30px;
+  padding: 10px;
+    color: var(--color-secondary);
+  }
+  
+  h4 {
+    font-size: 48px;
+    color: var(--color-primary);
+    font-weight: 400;
+    font-family: var(--font-primary);
+    margin-bottom: 25px;
+    padding: 15px;
+  }
+  
+   h4 sup {
+    font-size: 28px;
+  }
+  
+  h4 span {
+    color: rgba(108, 117, 125, 0.8);
+    font-size: 18px;
+  }
+  
+   ul {
+  
+    padding: 150px 20px;
+    list-style: none;
+    color: red;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+  }
+  
+  ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    color: #1E710A;
+  }
+  
+   ul i {
+    color: #1E710A;
+    font-size: 24px;
+    padding-right: 5px;
+  }
+  
+  p{
+    font-family: var(--font-default);
+  color: #1E710A;
+    font-size: 20px;
+  }
+   
+  .card-img-top {
+    width: 90%;
+    height: 15vw;
+    object-fit: cover;
+    padding-bottom: 70px;
+}
+    
+  </style>
+  <div class="row gy-4">
+  
+    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+  
+            <div class="card">
+              <div class="content">
+                <div class="front">
+                  <h3>Wheat</h3>
+            <h4><sup>₹</sup>1500<span>INR /Quintal</span>
+              <!-- <span>&#10003; your order has been placed successfully!!!</span> -->
+              <h5><p><i class="fa fa-check-circle  fa-sm" aria-hidden="true"></i> YOUR ORDER HAS BEEN PLACED SUCCESSFULLY!</p></h5>
+            </h4>
+<!-- <i class='fa fa-check' style='color:#09e12d'></i> -->
+              <!-- <i style="font-size:15px; padding: 25px; line-height: normal;  font-style:normal;"  class="fa">&#xf058;  Your order has been placed successfully!</i> -->
+              <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"   class="card-img-top" width="400" height="200"> 
+             
+            </div>
+                <div class="back">
+                  <ul>
+              <li><i class="bi-person-fill"></i>    Farmer: Ramesh</li>
+              <li><i class="bi-phone-fill"></i>Phone number: 1234567890</li>
+              <li><i class="bi-basket2-fill"></i> Quantity: 4 Quintals</li>
+              <li><i class="bi-geo-alt-fill"></i>Location: Kundapur</li>
+             </ul>
+            </div>
+                </div>
+              </div>
+              </div>   <!--end-->
+  
+              <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                  <div class="content">
+                    <div class="front">
+                      <h3>Rice</h3>
+                <h4><sup>₹</sup>1500<span>INR /Quintal</span>
+                  <h5><p><i class="fa fa-check-circle  fa-sm" aria-hidden="true"></i> YOUR ORDER HAS BEEN PLACED SUCCESSFULLY!</p></h5>
+            </h4>
+                  <!-- <i style="font-size:15px; padding: 25px; line-height: normal;  font-style:normal;"  class="fa">&#xf058;  Your order has been placed successfully!</i> -->
+                  <img src="https://previews.123rf.com/images/scenery1/scenery11409/scenery1140900325/32001383-raw-long-grain-white-rice-grains-in-burlap-bag.jpg" class="card-img-top" width="250" height="100"> 
+                <!-- </h4>  -->
+                </div>
+                    <div class="back">
+                      <ul>
+                  <li><i class="bi-person-fill"></i>    Farmer: Ramesh</li>
+                  <li><i class="bi-phone-fill"></i>Phone number: 1234567890</li>
+                  <li><i class="bi-basket2-fill"></i> Quantity: 4 Quintals</li>
+                  <li><i class="bi-geo-alt-fill"></i>Location: Kundapur</li>
+                 </ul>
+                </div>
+                    </div>
+                  </div>
+                  </div>   <!--end-->
+  
+  
+  
+                  <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                      <div class="content">
+                        <div class="front">
+                          <h3>Corn</h3>
+                    <h4><sup>₹</sup>1500<span>INR /Quintal</span>
+                      <h5><p><i class="fa fa-check-circle  fa-sm" aria-hidden="true"></i> YOUR ORDER HAS BEEN PLACED SUCCESSFULLY!</p></h5>
+            </h4>
+                      <!-- <i style="font-size:15px; padding: 25px; line-height: normal;  font-style:normal;"  class="fa">&#xf058;  Your order has been placed successfully!</i> -->
+                      <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="card-img-top" width="250" height="100"> 
+                    <!-- </h4>  -->
+                    </div>
+                        <div class="back">
+                          <ul>
+                      <li><i class="bi-person-fill"></i>    Farmer: Ramesh</li>
+                      <li><i class="bi-phone-fill"></i>Phone number: 1234567890</li>
+                      <li><i class="bi-basket2-fill"></i> Quantity: 4 Quintals</li>
+                      <li><i class="bi-geo-alt-fill"></i>Location: Kundapur</li>
+                     </ul>
+                    </div>
+                        </div>
+                      </div>
+                      </div>     <!--end-->
+  
+
+
+
+
+                      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+  
+                        <div class="card">
+                          <div class="content">
+                            <div class="front">
+                              <h3>Barley</h3>
+                        <h4><sup>₹</sup>1500<span>INR /Quintal</span>
+                          <h5><p><i class="fa fa-check-circle  fa-sm" aria-hidden="true"></i> YOUR ORDER HAS BEEN PLACED SUCCESSFULLY!</p></h5>
+            </h4>
+                          <!-- <i style="font-size:15px; padding: 25px; line-height: normal;  font-style:normal;"  class="fa">&#xf058;  Your order has been placed successfully!</i> -->
+                          <img src="https://2.imimg.com/data2/BI/VC/MY-2078826/barley-500x500.jpg" class="card-img-top" width="250" height="100"> 
+                        <!-- </h4>  -->
+                        </div>
+                            <div class="back">
+                              <ul>
+                          <li><i class="bi-person-fill"></i>    Farmer: Ramesh</li>
+                          <li><i class="bi-phone-fill"></i>Phone number: 1234567890</li>
+                          <li><i class="bi-basket2-fill"></i> Quantity: 4 Quintals</li>
+                          <li><i class="bi-geo-alt-fill"></i>Location: Kundapur</li>
+                         </ul>
+                        </div>
+                            </div>
+                          </div>
+                          </div> 
+
+
+                          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+  
+                            <div class="card">
+                              <div class="content">
+                                <div class="front">
+                                  <h3>Brown Rice</h3>
+                            <h4><sup>₹</sup>1500<span>INR /Quintal</span>
+                              <h5><p><i class="fa fa-check-circle  fa-sm" aria-hidden="true"></i> YOUR ORDER HAS BEEN PLACED SUCCESSFULLY!</p></h5>
+            </h4>
+                              <!-- <i style="font-size:15px; padding: 25px; line-height: normal;  font-style:normal;"  class="fa">&#xf058;  Your order has been placed successfully!</i> -->
+                              <img src="https://isthisthatfood.com/wp-content/uploads/2019/02/RICE-GRAIN-FB.jpg" class="card-img-top"  width="250" height="100"> 
+                            <!-- </h4>  -->
+                            </div>
+                                <div class="back">
+                                  <ul>
+                              <li><i class="bi-person-fill"></i>    Farmer: Ramesh</li>
+                              <li><i class="bi-phone-fill"></i>Phone number: 1234567890</li>
+                              <li><i class="bi-basket2-fill"></i> Quantity: 4 Quintals</li>
+                              <li><i class="bi-geo-alt-fill"></i>Location: Kundapur</li>
+                             </ul>
+                            </div>
+                                </div>
+                              </div>
+                              </div> 
+  </div>
+             
+
+
+
+{% endblock content %}
