@@ -59,7 +59,7 @@ h6 {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-  padding: 80px 0;
+  padding: 80px 0px ;
   overflow: hidden;
 }
 
@@ -326,6 +326,8 @@ section {
   color: #fff;
   font-family: var(--font-primary);
 }
+
+
 
 /*--------------------------------------------------------------
 # Desktop Navigation
@@ -930,6 +932,7 @@ section {
   margin-bottom: 0;
 }
 
+
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
@@ -1017,7 +1020,7 @@ section {
   color: #fff;
 }
 
-.pricing .featured {
+.pricing .featured .back{
   border-color: var(--color-primary);
 
 
@@ -1042,6 +1045,10 @@ section {
   transition: 0.3s;
   border: 1px solid var(--color-primary);
 }
+
+
+
+
 
 
 @media (max-width: 992px) {
@@ -1338,6 +1345,7 @@ section {
   background: #fff;
   height: 100%;
   position: relative;
+  /* padding-left: 25px; */
 }
 
 .horizontal-pricing h3 {
@@ -1418,6 +1426,7 @@ section {
 
 .horizontal-pricing .featured {
   background: var(--color-primary);
+  padding-left: 25px;
 }
 
 .horizontal-pricing .featured h3,
@@ -1453,6 +1462,7 @@ section {
 .get-a-quote .php-email-form {
   background: rgb(220, 231, 216);
   padding: 40px;
+  
   height: 100%;
 }
 
