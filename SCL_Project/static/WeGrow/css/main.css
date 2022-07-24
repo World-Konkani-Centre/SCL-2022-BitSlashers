@@ -1022,8 +1022,8 @@ section {
 
 .pricing .featured .back{
   border-color: var(--color-primary);
-  
-  
+
+
 }
 
 
@@ -1031,19 +1031,20 @@ section {
   background: var(--color-primary);
   color: #fff;
 }
+
 .pricing .featured .buy-btn {
-  
-    display: inline-block;
-    padding: 12px 35px;
-    border-radius: 4px;
-    color: var(--color-primary);
-    transition: none;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: var(--font-primary);
-    transition: 0.3s;
-    border: 1px solid var(--color-primary);
-  }
+
+  display: inline-block;
+  padding: 12px 35px;
+  border-radius: 4px;
+  color: var(--color-primary);
+  transition: none;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--font-primary);
+  transition: 0.3s;
+  border: 1px solid var(--color-primary);
+}
 
 
 
@@ -1408,9 +1409,9 @@ section {
   display: inline-block;
   padding: 12px 40px;
   border-radius: 4px;
-  color: #fff;
+  color: #4E944F;
   background-color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  /* border: 2px solid var(--color-primary); */
   transition: none;
   font-size: 16px;
   font-weight: 500;
@@ -1999,4 +2000,132 @@ section {
   background: rgb(220, 231, 216);
   padding: 50px;
   height: 100%;
+}
+
+/* ---------------------------------------------------------------- */
+/* Order Confirmation */
+/* ---------------------------------------------------------------- */
+small-container {
+  margin: 100px auto;
+  align-content: space-between;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  
+
+
+}
+
+.head{
+  align-content: space-between;
+  
+}
+.head th h2{
+  text-align: left;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+
+th {
+  text-align: right;
+  padding: 5px;
+  color: #fff;
+  background: #4DAF35;
+  font-weight: normal;
+
+}
+
+td {
+  padding-left: 50px 25px;
+}
+
+td input {
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+
+td a {
+  color: #4DAF35;
+  font-size: 12px;
+
+}
+
+td img {
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+  border-color: white;
+
+}
+
+.total-price {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.total-price table {
+  border-top: 3px solid #4DAF35;
+  width: 100%;
+  max-width: 600px;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+.total-price input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: #4DAF35;
+  border-radius: 5px;
+}
+
+
+.total-price .confirm-btn {
+  display: inline-block;
+  padding: 0px 5px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--color-primary);
+  border: 10px solid var(--color-primary);
+  transition: none;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+  font-family: var(--font-primary);
+  border-width: 10px;
+}
+
+.total-price .confirm-btn:hover {
+
+  background: #4DAF35;
+  border-color: #4DAF35;
+
+}
+
+.total-price.featured .confirm-btn {
+  background: var(--color-primary);
+  color: #4DAF35;
+  border-color: #4DAF35;
+  padding: 10px;
+}
+
+.total-price .featured .confirm-btn:hover {
+  background: #4DAF35;
+  color: var(--color-primary);
 }
