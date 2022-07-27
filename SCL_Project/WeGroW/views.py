@@ -37,3 +37,6 @@ def signup(request):
 
 def buyer(request):
     return render(request, 'buyer.html')
+
+def profile(request):
+    return render(request, 'profile.html')
