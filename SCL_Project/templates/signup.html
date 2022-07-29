@@ -45,17 +45,18 @@
         <!-- <div class="col-lg-5 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div> -->
 
         <div >
-          <form action="forms/quote.php" method="post" class="php-email-form">
+          <form method="post" class="php-email-form">
+            {% csrf_token %}
             <h1>SIGNUP</h1>
 
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="departure" class="form-control" placeholder="City " required>
+                <input type="text" name="city" class="form-control" placeholder="City " required>
               </div>
 
               <div class="col-md-6">
-                <input type="text" name="delivery" class="form-control" placeholder="Pincode" required>
+                <input type="text" name="pincode" class="form-control" placeholder="Pincode" required>
               </div>
 
 
@@ -74,7 +75,7 @@
 
 
               <div class="col-md-12 ">
-                <input type="text" class="form-control" list="role" placeholder="Role" required>
+                <input type="text" class="form-control" list="role" placeholder="Role" name="role"required>
                 <datalist id="role">
                   <option>Farmer</option>
                   <option>Buyer</option>
@@ -84,11 +85,11 @@
 
 
               <div class="col-md-12">
-                <input type="tel" class="form-control" name="phone" placeholder="Phone" required>
+                <input type="tel" class="form-control" name="phone" placeholder="mobile" required>
               </div>
 
               <div class="col-md-12">
-                <input type="tel" name="form-control" class="form-control" placeholder="OTP" required>
+                <input type="tel" name="OTP" class="form-control" placeholder="OTP" required>
               </div>
 
              
