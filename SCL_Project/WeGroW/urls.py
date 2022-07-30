@@ -13,7 +13,7 @@ urlpatterns = [
     path('add-store/', views.add_store, name='store'),
     path('login/', views.login, name='login'),
     path('signup/', views.signup, name='signup'),
-    path('confirm/', views.confirm, name='confirm'),
+
 
 
 ]
