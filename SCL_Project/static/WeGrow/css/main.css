@@ -2003,18 +2003,16 @@ small-container {
 table {
   width: 100%;
   border-collapse: collapse;
-  
-  
-
-
-}
+ }
 
 .head{
   align-content: space-between;
-  
 }
-.head th h2{
-  text-align: left;
+
+.head th h3{
+  text-align:left;
+  color:#fff;
+  padding: 25px;
 }
 
 .cart-info {
@@ -2041,6 +2039,7 @@ td input {
   width: 40px;
   height: 30px;
   padding: 5px;
+  
 }
 
 td a {
@@ -2101,21 +2100,44 @@ th:last-child {
   border-width: 10px;
 }
 
-.total-price .confirm-btn:hover {
+/*.total-price .confirm-btn:hover {
 
   background: #4DAF35;
   border-color: #4DAF35;
 
+
+}
+*/
+.total-price button[type=submit] {
+  background: var(--color-primary);
+  border: 0;
+  padding :10px 35px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 5px;
+
+ 
 }
 
-.total-price.featured .confirm-btn {
+
+
+.total-price button[type=submit]:hover {
+  background: #FFA456
+ }
+ 
+ 
+
+ 
+
+/*.total-price.featured .confirm-btn {
   background: var(--color-primary);
   color: #4DAF35;
   border-color: #4DAF35;
-  padding: 10px;
+  
+  text-align: end;
+ padding-right: 20px;
+  
+    padding :10px 35px;
+  
 }
 
-.total-price .featured .confirm-btn:hover {
-  background: #4DAF35;
-  color: var(--color-primary);
-}
