@@ -2118,11 +2118,8 @@ th:last-child {
 
  
 }
-
-
-
 .total-price button[type=submit]:hover {
-  background: #FFA456
+  background: #FFA456;
  }
  
  
