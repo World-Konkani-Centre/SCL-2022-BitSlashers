@@ -11,9 +11,8 @@ urlpatterns = [
     path('service-detail/', views.service_detail, name='service-detail'),
     path('pricing/', views.pricing, name='pricing'),
     path('add-store/', views.add_store, name='store'),
-    path('login/', views.login, name='login'),
+    path('login/', views.loginp, name='login'),
     path('signup/', views.signup, name='signup'),
-
-
-
+    path('otp/', views.otp, name='otp'),
+    path('invalid/',views.invalid,name='invalid')
 ]

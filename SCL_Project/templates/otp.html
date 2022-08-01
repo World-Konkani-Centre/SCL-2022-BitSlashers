@@ -50,33 +50,41 @@
         <!-- <div class="col-lg-5 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div> -->
 
         
-          <form method="post" class="php-email-form" >
+          <form method="post" class="php-email-form">
             {% csrf_token %}
             <h1>LOGIN</h1>
             
             <div class="row gy-4">
+
+              
+
               <div class="col-md-12">
-                <input type="text" name="mobile" class="form-control" placeholder="Phone no" required>
+                <input type="text" name="OTP" class="form-control" placeholder="OTP" required>
               </div>
+
               <div class="content">
                 <div class="checkbox">
                   <input type="checkbox" id="remember-me">
                   <label for="remember-me">Remember me</label>
                 </div>
+                
                 <div class="pass-link">
                     
                      <a href="#">Forgot password?</a></div>
-                </div>
-                 
+                    </div>
+
                     <div class="signup-link">
                         Not a member? <a href="#">Signup now</a></div>
+              
 
               <div class="col-md-12 text-center">
-                <!-- <div class="loading">Loading</div> -->
+                <div class="loading">Loading</div>
                 <div class="error-message"></div>
-                <!-- <div class="sent-message">Login Successfull!</div> -->
+                <div class="sent-message">Login Successfull!</div>
+
                 <button type="submit">LOGIN</button>
               </div>
+
             </div>
           </form>
         </div><!-- End Quote Form -->
