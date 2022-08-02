@@ -38,4 +38,7 @@ def login(request):
 def signup(request):
     return render(request, 'signup.html')
 
+def otp(request):
+    return render(request, 'otp.html')
+
 
