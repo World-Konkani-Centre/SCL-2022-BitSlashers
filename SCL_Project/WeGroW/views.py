@@ -119,3 +119,7 @@ def otp(request):
 
 def invalid(request):
     return render(request,'invalid.html')
+
+def my_logout(request):
+    logout(request)
+    return redirect('login')
