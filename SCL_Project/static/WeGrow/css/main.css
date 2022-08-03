@@ -661,7 +661,15 @@ section {
   font-size: 32px;
   font-family: var(--font-secondary);
   color: #4DAF35;
+  padding-top: 25px; 
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  padding: 200px;
+}
+
 
 .about .content ul {
   list-style: none;

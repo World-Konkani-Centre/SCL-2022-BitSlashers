@@ -16,5 +16,8 @@ urlpatterns = [
     path('otp/', views.otp, name='otp'),
     path('invalid/',views.invalid,name='invalid'),
     path('logout/', views.my_logout, name='logout'),
+        path('buyer/', views.buyer, name='buyer'),
+     path('profile/', views.profile, name='profile')
+
     
 ]

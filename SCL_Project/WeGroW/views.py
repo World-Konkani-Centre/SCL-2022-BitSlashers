@@ -48,6 +48,13 @@ def add_store(request):
         return redirect('/login/')
     return render(request, 'create_store.html')
 
+def buyer(request):
+    return render(request, 'buyer.html')
+
+def profile(request):
+    return render(request, 'profile.html')
+
+
 
 def loginp(request):
     if request.method=="POST":
