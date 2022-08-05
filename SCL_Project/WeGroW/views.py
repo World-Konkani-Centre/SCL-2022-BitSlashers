@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Profile
-from django.contrib.auth import authenticate, login,logout
+from django.contrib.auth import authenticate, login,logout,models
 import http.client
 
 # @login_required
@@ -49,9 +49,13 @@ def add_store(request):
     return render(request, 'create_store.html')
 
 def buyer(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
     return render(request, 'buyer.html')
 
 def profile(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
     return render(request, 'profile.html')
 
 
@@ -59,7 +63,6 @@ def profile(request):
 def loginp(request):
     if request.method=="POST":
         mobile = request.POST.get('mobile')
-        check_profile = Profile.objects.filter(mobile = mobile).first()
         conn = http.client.HTTPSConnection("kptries-otp-api.herokuapp.com")
         payload = 'number='+str(mobile)
         headers = {
@@ -70,37 +73,26 @@ def loginp(request):
         data = res.read()
         print(data.decode("utf-8"))
         request.session['mobile']=mobile
-        if not check_profile:
-            return redirect("/signup/")
-        else :
-            return redirect("/otp/")
+        return redirect("/otp/")
     return render(request, 'login.html')
 
 def signup(request):
+    # is_auth=request.session['auth']
+    # if is_auth is not "true":
+        # return redirect("/login/")
     if request.method=="POST":
-        mobile = request.POST.get('phone')
+        mobile = request.session['mobile']
         pincode=request.POST.get('pincode')
         name=request.POST.get('name')
         city=request.POST.get('city')
-        otp=request.POST.get('OTP')
         role=request.POST.get('role')
-        conn = http.client.HTTPSConnection("kptries-otp-api.herokuapp.com")
-        payload = 'number='+str(mobile)+'&otp='+str(otp)
-        headers = {
-        'Content-Type': 'application/x-www-form-urlencoded'
-        }
-        conn.request("POST", "/verify", payload, headers)
-        res = conn.getresponse()
-        data = res.read().decode('utf-8')
-        if data.find("Success")!=-1:
-            user = User(username = name)
-            user.save()
-            profile = Profile(user = user , mobile=mobile , pincode=pincode,role=role,city=city) 
-            profile.save()
-            login(request,user)
-            return redirect("/home/")
-        else:
-            return redirect("/invalid")
+        userId="user"+str(Profile.objects.all().count()+1)
+        user = User(username = userId,first_name=name)
+        user.save()
+        profile = Profile(user = user , mobile=mobile , pincode=pincode,role=role,city=city) 
+        profile.save()
+        login(request,user)
+        return redirect("/home/")
     return render(request, 'signup.html')
 
 def otp(request):
@@ -117,6 +109,9 @@ def otp(request):
         data = res.read().decode('utf-8')
         if data.find("Success")!=-1:
             profile = Profile.objects.filter(mobile = mobile).first()
+            if not profile:
+                # request.session['auth']="true"
+                return redirect("/signup/")
             login(request,profile.user)
             return redirect("/home/")
         else:
