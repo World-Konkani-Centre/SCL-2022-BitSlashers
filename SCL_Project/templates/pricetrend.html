@@ -1,36 +1,67 @@
 {% extends 'base.html' %}
 {% block content %}
-<!DOCTYPE html>
-<html>
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
-<body>
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>What's out there?</h2>
+            <p>Check the price trend</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- End Breadcrumbs -->
+
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="pricing">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row gy-4">
+        <div class="table-responsive"></div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
 
 
-<table style="width:100%">
-  <tr>
-    <th>Product</th>
-    <th>Farmer's Name</th>
-    <th>Price Per Quintal</th>
-  </tr>
-  <tr>
-    <td>Wheat</td>
-    <td>Maria Anders</td>
-    <td>200</td>
-  </tr>
-  <tr>
-    <td>Rice</td>
-    <td>Francisco Chang</td>
-    <td>339</td>
-  </tr>
-</table>
 
 
-</body>
-</html>
+
+
+      </div>
+
+    </div>
+  </section><!-- End Pricing Section -->
+
+</main><!-- End #main -->
+
 
 
 {% endblock content %}

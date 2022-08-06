@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Buy a product</h2>
+            <p>Happiness is not a goal; it is a by-product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- End Breadcrumbs -->
+
+  <section id="get-a-quote" class="get-a-quote">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row g-0">
+
+        <div class="col-lg-3 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div>
+
+        <div class="col-lg-7">
+          <form action="forms/quote.php" method="post" class="php-email-form">
+            <h3>Buy Product</h3>
+            <p>
+              <!--Discription -->
+            </p>
+            <div class="row gy-4">
+
+              <div class="col-md-12">
+                <input type="text" name="product" class="form-control" placeholder="Name of the Product" required>
+              </div>
+
+              <div class="col-lg-12">
+                <h4>Location Details</h4>
+              </div>
+
+              <div class="col-md-6 ">
+                <input type="Country" class="form-control" name="Country" placeholder="Country" required>
+              </div>
+
+
+              <div class="col-md-6 ">
+                <input type="State" class="form-control" name="State" placeholder="State" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="District" class="form-control" name="District" placeholder="District" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="" class="form-control" name="pin-code" placeholder="Pin-Code" maxlength="6" required>
+              </div>
+
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message">Could not place offer! Try again!</div>
+                <div class="sent-message">Your offer has been successfully placed!</div>
+
+                <button type="submit"><a href="{% url 'view_store' %}">SEARCH</a></button> 
+              </div>
+            </div>
+          </form>
+        </div><!-- End Quote Form -->
+
+      </div>
+
+    </div>
+  </section><!-- End Get a Quote Section -->
+
+</main><!-- End #main -->
+
+{% endblock content %}
