@@ -10,14 +10,10 @@
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
-  
+
     <!-- Favicons -->
     <link href="{% static 'WeGrow/img/favicon.png' %}" rel="icon" />
     <link href="{% static 'WeGrow/img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
-    <link href="{% static 'WeGrow/img/rice.jpg' %}" rel="rice" />
-    <link href="{% static 'WeGrow/img/wheat.jpg' %}" rel="wheat" />
-    <link href="{% static 'WeGrow/img/barley.jpg' %}" rel="Barley" />
-
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,15 +55,15 @@
                 <ul>
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <!-- <li><a href="{% url 'about' %}" class="active">About</a></li> -->
-                    <!-- <li><a href="{% url 'service' %}">Services</a></li> -->
-                    <li><a href="{% url 'pricing' %}">Pricing</a></li>
+                    <li><a href="{% url 'trend' %}">Trends</a></li>
+
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                     <li class="dropdown">
                         <a href="#"><span>Profile</span>
                             <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                         <ul>
-                            <li><a href="#">Account</a></li>
-                            <li><a href="{% url 'service' %}">Analytics</a></li>
+                            <li><a href="{% url 'profile' %}">Account</a></li>
+                            <li><a href="{% url 'user_analytics' %}">Analytics</a></li>
                             <!-- <li class="dropdown">
                                 <a href="#"><span>Deep Drop Down</span>
                                     <i class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -84,7 +80,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="get-a-quote" href="{% url 'store' %}">Trade</a>
+                        <a class="get-a-quote" href="{% url 'option' %}">Trade</a>
                     </li>
                 </ul>
             </nav>
@@ -93,7 +89,7 @@
     </header>
     <!-- End Header -->
     <!-- End Header -->
-    
+
     {% block content %}
     {% endblock content %}
 
@@ -110,7 +106,7 @@
                         nada terra videa magna derita valies darta donna mare fermentum
                         iaculis eu non diam phasellus.
                     </p> -->
-                    <!-- <div class="social-links d-flex mt-4">
+                <!-- <div class="social-links d-flex mt-4">
                         <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
                         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>

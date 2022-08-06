@@ -23,10 +23,25 @@ def contact(request):
         return redirect('/login/')
     return render(request, 'contact.html')
 
-def pricing(request):
+def trend(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
-    return render(request, 'pricing.html')
+    return render(request, 'pricetrend.html')
+
+def user_analytics(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'user_analytics.html')
+
+def option(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'option.html')
+
+def view_store(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'view_store.html')
 
 def sample(request):
     if not request.user.is_authenticated:
@@ -43,10 +58,20 @@ def service_detail(request):
         return redirect('/login/')
     return render(request, 'service-details.html')
 
-def add_store(request):
+def sell(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
-    return render(request, 'create_store.html')
+    return render(request, 'sell.html')
+
+def buy(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'buy.html')
+
+def confirm(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'confirm.html')
 
 def buyer(request):
     if not request.user.is_authenticated:
