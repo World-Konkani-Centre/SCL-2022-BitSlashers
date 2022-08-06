@@ -9,4 +9,12 @@ class Profile(models.Model):
     role=models.CharField(max_length=20)
     city=models.CharField(max_length=20)
     
-    
+class Product(models.Model):
+    product_name=models.CharField(max_length=300)
+    product_quantity=models.IntegerField()
+    product_price=models.IntegerField()
+    phone_number=models.CharField(max_length=10)
+    seller_country=models.CharField(max_length=20)
+    seller_state=models.CharField(max_length=20)
+    seller_district=models.CharField(max_length=20)
+    pin_code=models.IntegerField()

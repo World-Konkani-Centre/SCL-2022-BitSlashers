@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 from .models import Profile
 from django.contrib.auth import authenticate, login,logout,models
 import http.client
-
+from .models import Product
 # @login_required
 def home(request):
     if not request.user.is_authenticated:
@@ -61,6 +61,17 @@ def service_detail(request):
 def sell(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
+    if request.method == 'POST':
+       product = request.POST['product']
+       quantity = request.POST['quantity']
+       price = request.POST['price']
+       phone = request.POST['phone']
+       country = request.POST['Country']
+       state = request.POST['State']
+       district = request.POST['District']
+       pin_code = request.POST['pin-code']
+       ins = Product(product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
+       ins.save()
     return render(request, 'sell.html')
 
 def buy(request):
