@@ -34,7 +34,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -69,7 +68,7 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
 
 1. Fork and Clone
     <ol>
-    <li>Fork sushiksha-website the Repo</li>
+    <li>Fork WeGroW Repo</li>
     <li>Clone the repo to your computer.</li>
     </ol>
 
@@ -104,40 +103,26 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     git branch
     git checkout develop
     
-    ```
-   
-5.     
-    Change the config parameters (Optional, only if you want to enable mail sending functionality)
-    ```python
-   
-   SECRET_KEY = 'Enter random character string'
-   EMAIL_USER = 'your email username'
-   EMAIL_PASS = 'Enter you email password'
-   SLACK_AUTH_TOKEN: "token here"
+    ```   
 
-    ```
-   
-   comment line #45 (If you are using badge giving feature other leave as it is) of users/signals.py (send_email.delay(array)) during development and uncomment before sending PR
-   
-
-6. Make migrations/ Create db.sqlite3
+5. Make migrations/ Create db.sqlite3
 
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     ```
-7. Create a super user.
+6. Create a super user.
     In django if you want to access admin page, you need to create an account first.
     ```djangotemplate
     python manage.py createsuperuser
     ```
    Then select your username and password.
    
-8. Run server
+7. Run server
     ```bash
     python manage.py runserver
     ```
-9. Do the Development and send me a PR referencing the issue.
+8. Do the Development and send us a PR referencing the issue.
  
  <!-- CONTRIBUTING -->
 ## Contributing
