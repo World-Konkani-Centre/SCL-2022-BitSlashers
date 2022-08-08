@@ -103,6 +103,13 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
       git pull
       git branch
       git checkout develop
+      
+   5. Make migrations/ Create db.sqlite3
+
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
      
      
   6. Create a super user.
@@ -112,7 +119,7 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
       ```
      Then select your username and password.
 
-  8. Run server
+  7. Run server
       ```bash
       python manage.py runserver
       ```
