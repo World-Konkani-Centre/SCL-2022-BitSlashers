@@ -65,12 +65,13 @@ def sell(request):
        product = request.POST['product']
        quantity = request.POST['quantity']
        price = request.POST['price']
+       cur_user=request.user
        phone = request.POST['phone']
        country = request.POST['Country']
        state = request.POST['State']
        district = request.POST['District']
        pin_code = request.POST['pin-code']
-       ins = Product(product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
+       ins = Product(user=cur_user,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
        ins.save()
     return render(request, 'sell.html')
 
