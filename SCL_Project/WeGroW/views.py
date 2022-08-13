@@ -7,6 +7,7 @@ from .models import Profile
 from django.contrib.auth import authenticate, login,logout,models
 import http.client
 from .models import Product
+from .models import Contact_us
 # @login_required
 def home(request):
     if not request.user.is_authenticated:
@@ -21,7 +22,17 @@ def about(request):
 def contact(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
+        ins = Contact_us(name=name,email=email,subject=subject,message=message)
+        ins.save()
     return render(request, 'contact.html')
+
+def new_func(request):
+    name = request.POST['name']
 
 def trend(request):
     if not request.user.is_authenticated:

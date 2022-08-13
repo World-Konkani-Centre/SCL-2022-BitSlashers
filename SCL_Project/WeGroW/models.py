@@ -19,3 +19,9 @@ class Product(models.Model):
     seller_state=models.CharField(max_length=20)
     seller_district=models.CharField(max_length=20)
     pin_code=models.IntegerField()
+    
+class Contact_us(models.Model):
+    name=models.CharField(max_length=300)
+    email=models.CharField(max_length=300)
+    subject=models.CharField(max_length=300)
+    message=models.CharField(max_length=300)
