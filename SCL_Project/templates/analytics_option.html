@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+        <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+            <div class="container position-relative">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h2>Tell us your choice! </h2>
+                        <!-- <p>Happiness is not a goal; it is a by-product.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing">
+        <div class="container" data-aos="fade-up">
+
+            <div class="row gy-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-item featured">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
+                            width="200" height="100">
+
+                        <a href="{% url 'analytics_sold' %}" class="buy-btn" style="display: block; text-align: center; width:370px;">SOLD</a>
+                    </div>
+                </div><!-- End Pricing Item -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-item featured">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
+                            width="200" height="100">
+
+                        <a href="{% url 'analytics_bought' %}" class="buy-btn" style="display: block; text-align: center; width:370px;">BOUGHT</a>
+                    </div>
+                </div><!-- End Pricing Item -->
+
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-item featured">
+                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
+                            width="200" height="100">
+
+                        <a href="{% url 'analytics_for_sale' %}" class="buy-btn" style="display: block; text-align: center; width:370px;">IN SALE</a>
+                    </div>
+                </div><!-- End Pricing Item -->
+
+
+
+
+            </div>
+
+        </div>
+    </section><!-- End Pricing Section -->
+
+
+
+    {% endblock content %}

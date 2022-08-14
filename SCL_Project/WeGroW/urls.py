@@ -23,6 +23,10 @@ urlpatterns = [
     path('option/', views.option, name='option'),
     path('confirm/', views.confirm, name='confirm'),
     path('trend/', views.trend, name='trend'),
+    path('confirm-buy/',views.confirmBuy,name='confirm-buy'),
+    path('analytics_option/', views.analyticsOption, name='analytics_option'),
+    path('analytics_bought/', views.analyticsBought, name='analytics_bought'),
+    path('analytics_sold/', views.analyticsSold, name='analytics_sold'),
+    path('analytics_for_sale/', views.analyticsForSale, name='analytics_for_sale'),
 
-    
 ]

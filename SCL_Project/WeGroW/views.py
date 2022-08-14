@@ -7,8 +7,10 @@ from .models import Profile
 from django.contrib.auth import authenticate, login,logout,models
 import http.client
 from .models import Product
+from .distance_calc.distance import PincodeDistance
 from .models import Contact_us
-# @login_required
+from .models import Sold,Bought,ForSale
+
 def home(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
@@ -31,8 +33,6 @@ def contact(request):
         ins.save()
     return render(request, 'contact.html')
 
-def new_func(request):
-    name = request.POST['name']
 
 def trend(request):
     if not request.user.is_authenticated:
@@ -76,25 +76,66 @@ def sell(request):
        product = request.POST['product']
        quantity = request.POST['quantity']
        price = request.POST['price']
-       cur_user=request.user
+       cur_profile=Profile.objects.filter(user=request.user).first()
        phone = request.POST['phone']
        country = request.POST['Country']
        state = request.POST['State']
        district = request.POST['District']
        pin_code = request.POST['pin-code']
-       ins = Product(user=cur_user,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
+       prodId="prod"+str(Product.objects.all().count()+1)
+       ins = Product(profile=cur_profile,prodId=prodId,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
        ins.save()
+       forSale = ForSale(profile=cur_profile,prodId=prodId,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
+       forSale.save()
     return render(request, 'sell.html')
 
 def buy(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
+    if request.method == 'POST':
+        name=request.POST['product']
+        pincode=request.POST['pincode']
+        p=PincodeDistance()
+        products=Product.objects.filter(product_name=name)
+        dist=[]
+        for product in products:
+            dis=p.getDistance(pincode,product.pin_code)
+            while 1:
+                if dist.count(dis) > 0:
+                    dis+=1
+                else:
+                    break
+            dist.append(dis)
+        sorted_prod= [x for _,x in sorted(zip(dist,products))]
+        context = {
+        'products': sorted_prod,
+        }
+        return render(request,"view_store.html",context)
     return render(request, 'buy.html')
 
 def confirm(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
-    return render(request, 'confirm.html')
+    return redirect("/confirm/")
+    print(request.user)
+
+def confirmBuy(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    if request.method == 'GET':
+        prodId=request.GET['product']
+        product=Product.objects.get(prodId=prodId)
+        forSale=ForSale.objects.get(prodId=prodId)
+        cur_profile=Profile.objects.filter(user=request.user).first()
+        buyer = Bought(profile=cur_profile,seller_name=product.profile.user.first_name,prodId=product.prodId,product_name=product.product_name, product_quantity=product.product_quantity, product_price=product.product_price, phone_number=product.phone_number, seller_country=product.seller_country, seller_state=product.seller_state, seller_district=product.seller_district, pin_code=product.pin_code)
+        buyer.save()
+        seller = Sold(profile=product.profile,buyer_name=cur_profile.user.first_name,buyer_phone=cur_profile.mobile,prodId=product.prodId,product_name=product.product_name, product_quantity=product.product_quantity, product_price=product.product_price, phone_number=product.phone_number, seller_country=product.seller_country, seller_state=product.seller_state, seller_district=product.seller_district, pin_code=product.pin_code)
+        seller.save()
+        product.product_name=product.product_name+" Sold"
+        product.save()
+        forSale.delete()
+    return redirect("/home/")
+    
 
 def buyer(request):
     if not request.user.is_authenticated:
@@ -104,7 +145,26 @@ def buyer(request):
 def profile(request):
     if not request.user.is_authenticated:
         return redirect('/login/')
-    return render(request, 'profile.html')
+    if request.method=="POST":
+        mobile = request.POST.get('mobile')
+        pincode=request.POST.get('pincode')
+        name=request.POST.get('name')
+        city=request.POST.get('city')
+        user = request.user
+        profile = Profile.objects.get(user = user)
+        user.first_name=name
+        profile.mobile=mobile
+        profile.pincode=pincode
+        profile.user.first_name=name
+        profile.city=city
+        user.save()
+        profile.save()
+        login(request,user)
+    profile=Profile.objects.filter(user=request.user).first()
+    context = {
+        'profile': profile,
+        }
+    return render(request, 'profile.html',context)
 
 
 
@@ -173,3 +233,40 @@ def invalid(request):
 def my_logout(request):
     logout(request)
     return redirect('login')
+
+def analyticsBought(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    profile=Profile.objects.filter(user=request.user).first()
+    products=Bought.objects.filter(profile=profile)
+    context = {
+        'products': products,
+        }
+    return render(request, 'analytics_buyer.html',context)
+
+
+def analyticsSold(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    profile=Profile.objects.filter(user=request.user).first()
+    products=Sold.objects.filter(profile=profile)
+    context = {
+        'products': products,
+        }
+    return render(request, 'analytics_seller.html',context)
+
+
+def analyticsForSale(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    profile=Profile.objects.filter(user=request.user).first()
+    products=ForSale.objects.filter(profile=profile)
+    context = {
+        'products': products,
+        }
+    return render(request, 'analytics_forSale.html',context)
+
+def analyticsOption(request):
+    if not request.user.is_authenticated:
+        return redirect('/login/')
+    return render(request, 'analytics_option.html')

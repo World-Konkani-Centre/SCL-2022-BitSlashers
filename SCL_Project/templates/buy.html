@@ -26,7 +26,8 @@
         <div class="col-lg-3 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div>
 
         <div class="col-lg-7">
-          <form action="forms/quote.php" method="post" class="php-email-form">
+          <form action="" method="post" class="php-email-form">
+            {% csrf_token %}
             <h3>Buy Product</h3>
             <p>
               <!--Discription -->
@@ -55,16 +56,13 @@
               </div>
 
               <div class="col-md-6">
-                <input type="" class="form-control" name="pin-code" placeholder="Pin-Code" maxlength="6" required>
+                <input type="" class="form-control" name="pincode" placeholder="Pin-Code" maxlength="6" required>
               </div>
 
 
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message">Could not place offer! Try again!</div>
-                <div class="sent-message">Your offer has been successfully placed!</div>
 
-                <button type="submit"><a href="{% url 'view_store' %}" style="color: white;">SEARCH</a></button> 
+                <button type="submit"><a>SEARCH</a></button> 
               </div>
             </div>
           </form>

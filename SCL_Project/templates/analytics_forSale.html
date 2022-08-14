@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<script>
+  function redirectFunction(prodId) {
+jQuery.ajax(
+    {
+        type: 'GET',
+        url :"/confirm-buy?product="+prodId,
+        'contentType': 'application/json',
+        'dataType': 'json',
+    }
+);
+window
+  }
+</script>
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('assets/img/page-header.jpg');">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>In Sale</h2>
+            <p>Happiness is not a goal; it is a by-product.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- End Breadcrumbs -->
+  <!-- ======= Pricing Section ======= -->
+  <section id="pricing" class="pricing">
+    <div class="container" data-aos="fade-up">
+      <div class="row gy-4">
+        {% for product in products %}
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="pricing-item featured">
+            <h3>{{product.product_name}}</h3>
+            <h4><sup>₹</sup>{{product.product_price}}<span>INR /Quintal</span></h4>
+
+
+<img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"  width="200" height="100">
+            <ul>
+              <li><i class="bi-person-fill"></i>    Farmer: {{product.profile.user.first_name}}</li>
+              <li><i class="bi-phone-fill"></i>Phone number: {{product.phone_number}}</li>
+              <li><i class="bi-basket2-fill"></i> Quantity: {{product.product_quantity}} Quintals</li>
+              <li><i class="bi-geo-alt-fill"></i>Location: {{product.seller_district}}</li>
+            </ul>
+          </div>
+        </div><!-- End Pricing Item -->
+        {%endfor%}
+      </div>
+    </div>
+    </section>
+      </div>
+
+    </div>
+  </section>
+  
+
+</main><!-- End #main -->
+
+{% endblock content %}
