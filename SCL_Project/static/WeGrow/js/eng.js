@@ -7,5 +7,6 @@ var eng=[
    "Analytics",//5
    "LogOut",//6
    "Trade",//7
+   "A single stop solution",//8
   
   ]
