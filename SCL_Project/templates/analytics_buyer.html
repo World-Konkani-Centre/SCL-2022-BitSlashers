@@ -21,8 +21,8 @@ window
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2>Bought</h2>
-            <p>Happiness is not a goal; it is a by-product.</p>
+            <h2 id="53" >Bought</h2>
+            <p id="54"  >Happiness is not a goal; it is a by-product.</p>
           </div>
         </div>
       </div>
@@ -36,13 +36,13 @@ window
         {% for product in products %}
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
           <div class="pricing-item featured">
-            <h3>{{product.product_name}}</h3>
+            <h3 >{{product.product_name}}</h3>
             <h4><sup>₹</sup>{{product.product_price}}<span>INR /Quintal</span></h4>
 
 
 <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"  width="200" height="100">
             <ul>
-                <li><i class="bi-person-fill"></i>    Seller: {{product.seller_name}}</li>
+                <li ><i class="bi-person-fill"></i>    Seller: {{product.seller_name}}</li>
                 <li><i class="bi-phone-fill"></i>Seller Phone number: {{product.phone_number}}</li>
               <li><i class="bi-basket2-fill"></i> Quantity: {{product.product_quantity}} Quintals</li>
               <li><i class="bi-geo-alt-fill"></i>Location: {{product.seller_district}}</li>
