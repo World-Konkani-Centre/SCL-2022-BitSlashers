@@ -27,7 +27,7 @@
         <div class="col-lg-3 quote-bg" style="background-image: url(assets/img/quote-bg.jpg);"></div>
 
         <div class="col-lg-7">
-          <form action="" method="post" class="php-email-form" >
+          <form action="" method="post" class="php-email-form"  >
             {% csrf_token %}
             <h3 id="22">Sell Product</h3>
             <p>
@@ -74,11 +74,8 @@
 
 
               <div class="col-md-12 text-center">
-                <div class="loading" id="24">Loading</div>
-                <div class="error-message" id="25">Could not place offer! Try again!</div>
-                <div class="sent-message" id="26">Your offer has been successfully placed!</div>
 
-                <button type="submit" id="27">OFFER</button>
+                <button type="submit" id="27" onclick="handleFunctionSell(event)" >OFFER</button>
               </div>
             </div>
           </form>

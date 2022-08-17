@@ -1,18 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<script>
-  function redirectFunction(prodId) {
-jQuery.ajax(
-    {
-        type: 'GET',
-        url :"/confirm-buy?product="+prodId,
-        'contentType': 'application/json',
-        'dataType': 'json',
-    }
-);
-window
-  }
-</script>
+
 <main id="main">
 
   <!-- ======= Breadcrumbs ======= -->
@@ -48,7 +36,7 @@ window
               <li><i class="bi-geo-alt-fill"></i>Location: {{product.seller_district}}</li>
             </ul>
             
-          <a href="#" class="buy-btn" onclick="redirectFunction('{{product.prodId}}')">Buy Now</a>
+          <a href="#" class="buy-btn" onclick="handleFunctionBuy(event,'{{product.prodId}}')">Buy Now</a>
           </div>
         </div><!-- End Pricing Item -->
         {%endfor%}

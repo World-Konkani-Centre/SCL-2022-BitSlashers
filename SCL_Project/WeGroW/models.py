@@ -23,7 +23,7 @@ class Product(models.Model):
     
 class Contact_us(models.Model):
     name=models.CharField(max_length=300)
-    email=models.CharField(max_length=300)
+    phone=models.CharField(max_length=20)
     subject=models.CharField(max_length=300)
     message=models.CharField(max_length=300)
 
