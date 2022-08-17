@@ -1,8 +1,7 @@
  function handleFunctionContact(event) {
     event.preventDefault()
     form=document.forms[0]
-    console.log("Here")
-    if(!form.email.value||!form.name.value||!form.message.value||!form.subject.value){
+    if(!form.phone.value||!form.name.value||!form.message.value||!form.subject.value){
     Swal.fire('Please fill the all the fields', '', 'info')
     return;
     }
