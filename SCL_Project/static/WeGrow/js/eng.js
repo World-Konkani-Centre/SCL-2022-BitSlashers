@@ -11,10 +11,10 @@ var eng=[
    "A single stop solution",//8
   "Your Digital Marketplace where fair crop trade made EASY, FAST and TRANSPARENT!",//9
   "Search" ,//10
-  "Clients", //11
-  "Projects" ,//12
-  "Support", //13
-  "Workers", //14
+  "Hours", //11
+  "Days" ,//12
+  "Projects", //13
+  "People", //14
   "About Us",//15
    "We drive agricultural transactions through our digital platform. We help farmers to meet consumers, aided with analytical insights and regular price visibility", //16
 "Easy",//17

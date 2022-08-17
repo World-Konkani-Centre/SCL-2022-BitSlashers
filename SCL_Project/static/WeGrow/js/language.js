@@ -19,18 +19,18 @@
      }
    function renderText(l){
      if(l==="English"){
-     for(var i=0;i<10000;i++){
+     for(var i=0;i<100;i++){
        if(document.getElementById(i))
        document.getElementById(i).innerText=eng[i];
      }
    }
      else if(l==="Kannada")
-     for(var i=0;i<10000;i++){
+     for(var i=0;i<100;i++){
      if(document.getElementById(i))
      document.getElementById(i).innerText=kan[i];
      }
      else if(l==="Konkani")
-     for(var i=0;i<10000;i++){
+     for(var i=0;i<100;i++){
      if(document.getElementById(i))
      document.getElementById(i).innerText=konkani[i];
      }
