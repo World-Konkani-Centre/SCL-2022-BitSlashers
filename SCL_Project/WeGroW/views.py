@@ -26,12 +26,11 @@ def contact(request):
         return redirect('/login/')
     if request.method == 'POST':
         name = request.POST['name']
-        email = request.POST['email']
+        phone = request.POST['phone']
         subject = request.POST['subject']
         message = request.POST['message']
-        ins = Contact_us(name=name,email=email,subject=subject,message=message)
+        ins = Contact_us(name=name,phone=phone,subject=subject,message=message)
         ins.save()
-        print("Here")
         return redirect('/home/')
     return render(request, 'contact.html')
 
