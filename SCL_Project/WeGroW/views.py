@@ -31,6 +31,8 @@ def contact(request):
         message = request.POST['message']
         ins = Contact_us(name=name,email=email,subject=subject,message=message)
         ins.save()
+        print("Here")
+        return redirect('/home/')
     return render(request, 'contact.html')
 
 
@@ -87,6 +89,7 @@ def sell(request):
        ins.save()
        forSale = ForSale(profile=cur_profile,prodId=prodId,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
        forSale.save()
+       return redirect("/option/")
     return render(request, 'sell.html')
 
 def buy(request):

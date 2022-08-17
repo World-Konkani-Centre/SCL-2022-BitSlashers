@@ -48,7 +48,7 @@ window
               <li><i class="bi-geo-alt-fill"></i>Location: {{product.seller_district}}</li>
             </ul>
             
-          <a href="#" class="buy-btn" onclick="redirectFunction('{{product.prodId}}')">Buy Now</a>
+          <a href="#" class="buy-btn" onclick="handleFunctionBuy(event,'{{product.prodId}}')">Buy Now</a>
           </div>
         </div><!-- End Pricing Item -->
         {%endfor%}
