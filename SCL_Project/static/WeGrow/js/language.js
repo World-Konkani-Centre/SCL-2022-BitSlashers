@@ -4,7 +4,7 @@
      localStorage.setItem("language","English")
      l="English"
     }
-    var sel=document.getElementById("box1");
+    var sel=document.getElementById("language-selector");
     if(l=="English")
      sel.selectedIndex=0;
     if(l=="Kannada")
