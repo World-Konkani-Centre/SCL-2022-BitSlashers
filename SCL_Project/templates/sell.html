@@ -10,8 +10,8 @@
       <div class="container position-relative">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
-            <h2>Sell a product</h2>
-            <p>Selling is Happiness</p>
+            <h2 id="20">Sell a product</h2>
+            <p id="21">Selling is Happiness</p>
           </div>
         </div>
       </div>
@@ -29,14 +29,14 @@
         <div class="col-lg-7">
           <form action="" method="post" class="php-email-form" >
             {% csrf_token %}
-            <h3>Sell Product</h3>
+            <h3 id="22">Sell Product</h3>
             <p>
               <!--Discription -->
             </p>
             <div class="row gy-4">
 
               <div class="col-md-6">
-                <input type="text" name="product" class="form-control" placeholder="Name of the Product" required>
+                <input type="text" name="product" class="form-control" placeholder="Name of the Product"  required>
               </div>
 
               <div class="col-md-6">
@@ -52,7 +52,7 @@
               </div>
 
               <div class="col-lg-12">
-                <h4>Location Details</h4>
+                <h4 id="23">Location Details</h4>
               </div>
 
               <div class="col-md-6 ">
@@ -74,11 +74,11 @@
 
 
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message">Could not place offer! Try again!</div>
-                <div class="sent-message">Your offer has been successfully placed!</div>
+                <div class="loading" id="24">Loading</div>
+                <div class="error-message" id="25">Could not place offer! Try again!</div>
+                <div class="sent-message" id="26">Your offer has been successfully placed!</div>
 
-                <button type="submit">OFFER</button>
+                <button type="submit" id="27">OFFER</button>
               </div>
             </div>
           </form>
