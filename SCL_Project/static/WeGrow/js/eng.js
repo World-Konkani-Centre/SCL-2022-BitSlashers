@@ -83,15 +83,28 @@ var eng=[
 
 //pricetrend
 "What's out there?",//59
-"Check the price trend" //60
+"Check the price trend", //60
+"CropName",//61
+"Price/ Quintal (Rupees)",//62
+"Paddy",//63
+"Wheat",//64
+"Jowar (Maldandi)",//65
+"Jowar (Hybrid)",//66
+"Bajra",//67
+"Ragi",//68
+"Maize ",//69
+"Barley"//70
+// "",//71
+// // "",//71
+// // "",//72
+// "",//73
+// "",//74
+// "",//75
+// "1962",//76
 
 
-
-
-
-// "",//67
-// "",//68
-
+// "",//79
+// "",//80
 
 
 
