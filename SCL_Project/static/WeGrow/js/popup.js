@@ -1,3 +1,19 @@
+function handleFunctionProfile(event) {
+  event.preventDefault()
+  form=document.forms[0]
+  if(!form.city.value||!form.pincode.value||!form.name.value||!form.mobile.value){
+  Swal.fire('Please fill the all the fields', '', 'info')
+  return;
+  }
+  Swal.fire({
+    icon: 'success',
+    title: 'Profile Updated Successfully',
+    showConfirmButton: true,
+  }).then(() => {
+      form.submit()
+})
+}
+ 
  function handleFunctionContact(event) {
     event.preventDefault()
     form=document.forms[0]

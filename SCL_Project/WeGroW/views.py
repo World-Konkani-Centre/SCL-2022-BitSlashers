@@ -88,6 +88,14 @@ def sell(request):
        ins.save()
        forSale = ForSale(profile=cur_profile,prodId=prodId,product_name=product, product_quantity=quantity, product_price=price, phone_number=phone, seller_country=country, seller_state=state, seller_district=district, pin_code=pin_code)
        forSale.save()
+       message=f"Congratulations! Your offer has been placed, let's hope to connect you to a buyer! Happy Trading :).\nThe details of the offer are :\nProduct Id: {prodId}\nProduct Name: {product}\n Product Quantity: {quantity} Quintal \n Product Price: Rs. {price} per Quintal"
+       conn = http.client.HTTPSConnection("kptries-otp-api.herokuapp.com")
+       payload = 'phone='+str(cur_profile.mobile)+'&message='+message
+       headers = {
+       'Content-Type': 'application/x-www-form-urlencoded'
+       }
+       conn.request("POST", "/message", payload, headers)
+       res = conn.getresponse()
        return redirect("/option/")
     return render(request, 'sell.html')
 
@@ -136,6 +144,18 @@ def confirmBuy(request):
         product.product_name=product.product_name+" Sold"
         product.save()
         forSale.delete()
+        message=f"Congratulations! Your order has been placed, Please connect to your seller! Happy Trading :).\nThe details of the farmer are \nFarmer Name: {product.profile.user.first_name}\n  Farmer Phone Number: {product.profile.mobile}\nProduct Id: {product.prodId}\nProduct Name: {product.product_name}\n Product Quantity: {product.product_quantity} Quintal\n Product Price: Rs. {product.product_price} per Quintal"
+        conn = http.client.HTTPSConnection("kptries-otp-api.herokuapp.com")
+        payload = 'phone='+str(cur_profile.mobile)+'&message='+message
+        headers = {
+        'Content-Type': 'application/x-www-form-urlencoded'
+        }
+        conn.request("POST", "/message", payload, headers)
+        res = conn.getresponse()
+        message=f"Congratulations! We see a buyer for your crop! Please connect to your Buyer! Happy Trading :).\nThe details of the Buyer are \nBuyer Name: {cur_profile.user.first_name}\n  Buyer Phone Number: {cur_profile.mobile}\nProduct Id: {product.prodId}\nProduct Name: {product.product_name}\n Product Quantity: {product.product_quantity} Quintal\n Product Price: Rs. {product.product_price} per Quintal"
+        payload = 'phone='+str(product.profile.mobile)+'&message='+message
+        conn.request("POST", "/message", payload, headers)
+        res = conn.getresponse()
     return redirect("/home/")
     
 
