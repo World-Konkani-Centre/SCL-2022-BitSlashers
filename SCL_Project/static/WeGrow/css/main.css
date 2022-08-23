@@ -531,7 +531,8 @@ section {
     border-radius: 4px;
     margin: 15px;
     color: #fff;
-  }
+    
+    }
 
   .navbar .get-a-quote:hover,
   .navbar .get-a-quote:focus:hover {
@@ -2146,8 +2147,15 @@ th:last-child {
   background:#4DAF35
  }
  
- 
+#language-selector 
+{
 
+  border: none;
+}
+
+#language-selector:hover:focus{
+  background:#4DAF35
+}
  
 
 /*.total-price.featured .confirm-btn {
