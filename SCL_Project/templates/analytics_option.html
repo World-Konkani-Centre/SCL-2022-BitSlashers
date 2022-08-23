@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+     img {
+  display: block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+</style>
 
 <main id="main">
 
@@ -22,34 +29,46 @@
     <section id="pricing" class="pricing">
         <div class="container" data-aos="fade-up">
 
-            <div class="row gy-4">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-2">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-item featured">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
-                            width="200" height="100">
+                        <img src="https://media.istockphoto.com/vectors/green-vector-shopping-cart-and-check-mark-icon-vector-id1174658404?k=20&m=1174658404&s=170667a&w=0&h=uThnXErZkt_N1-G0G7MELn21xon9iI-ZBDJvcpBklK8="
+                            width="250" height="200">
 
                         <a href="{% url 'analytics_sold' %}" class="buy-btn"  id="29" style="display: block; text-align: center; width:370px;">SOLD</a>
                     </div>
                 </div><!-- End Pricing Item -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-item featured">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
-                            width="200" height="100">
+                        <img src="https://media.istockphoto.com/vectors/shopping-basket-icon-vector-id1345645564?b=1&k=20&m=1345645564&s=612x612&w=0&h=I4Z_ByPL4YSLoFBKPoLKbnY3s0MkyWn_v9GgAy6ERN8="
+                            width="250" height="200">
+
+                            <!-- <i class="fa-solid fa-basket-shopping-simple fa-3x" ></i> -->
+                            <!-- <i class="fa-regular fa-basket-shopping-simple"></i> -->
 
                         <a href="{% url 'analytics_bought' %}" class="buy-btn"  id="30" style="display: block; text-align: center; width:370px;">BOUGHT</a>
                     </div>
                 </div><!-- End Pricing Item -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-item featured">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
-                            width="200" height="100">
+                        <img src="data:image/png;base64,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"
+                            width="250" height="200">
+                           <!-- <div class="icon">
+                           
+                             <i class="fas fa-shopping-cart fa-3x" style="text-align: center;"> </i> -->
+                           <!-- </div> --> 
+                            <!-- <ul>
+                                <li>
 
-                        <a href="{% url 'analytics_for_sale' %}" class="buy-btn" id="31" style="display: block; text-align: center; width:370px;">IN SALE</a>
+                                </li>
+                            </ul> -->
+
+                        <a href="{% url 'analytics_for_sale' %}" class="buy-btn" id="31" style="display: block; text-align: center; width:370px;" > IN SALE</a>
                     </div>
                 </div><!-- End Pricing Item -->
-
+                
 
 
 
