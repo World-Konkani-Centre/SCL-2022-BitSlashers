@@ -1014,7 +1014,7 @@ section {
 
 .pricing .buy-btn {
   display: inline-block;
-  padding: 12px 35px;
+  padding: 12px 15px;
   border-radius: 4px;
   color: var(--color-primary);
   transition: none;
@@ -1046,7 +1046,9 @@ section {
 
   display: inline-block;
   padding: 12px 35px;
-  border-radius: 4px;
+  border-radius: 2px;
+
+  width: 300px !important;
   color: var(--color-primary);
   transition: none;
   font-size: 16px;
@@ -1054,6 +1056,7 @@ section {
   font-family: var(--font-primary);
   transition: 0.3s;
   border: 1px solid var(--color-primary);
+  
 }
 
 

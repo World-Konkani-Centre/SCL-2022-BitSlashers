@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<style>
+    .buy-btn{
+      
+        margin-top: 50px;
+    }
+    img {
+  display: block;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+    
+</style>
 
 <main id="main">
 
@@ -22,23 +35,24 @@
     <section id="pricing" class="pricing">
         <div class="container" data-aos="fade-up">
 
-            <div class="row gy-4">
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row gy-3">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-item featured">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
-                            width="200" height="100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZh57wKadLp2K6EaLEJVOVkJpBDzFtU9bhGP1I1aacLo0bq-fodQBSbBz6B0h5PwgwJM&usqp=CAU"
+                        width="250" height="200">
 
                         <a href="{% url 'sell' %}" class="buy-btn" id="46" style="display: block; text-align: center; width:370px;">SELL</a>
                     </div>
                 </div><!-- End Pricing Item -->
 
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="pricing-item featured">
-                        <img src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-78428,resizemode-1,msid-91507504/small-biz/trade/exports/insights/from-india-to-france-wheat-crops-are-coming-under-threat-everywhere.jpg"
-                            width="200" height="100">
+                        <img src="https://www.iconsdb.com/icons/preview/green/shopping-basket-xxl.png"
+                            width="250" height="200">
 
                         <a href="{% url 'buy' %}" class="buy-btn" id="47" style="display: block; text-align: center; width:370px;">BUY</a>
-                    </div>
+                    
+                </div>
                 </div><!-- End Pricing Item -->
 
 
