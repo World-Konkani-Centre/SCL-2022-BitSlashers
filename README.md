@@ -115,7 +115,7 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
 
     ```bash
     python manage.py makemigrations
-    python manage.py migrate
+    python manage.py migrate --run-syncdb
     ```
 6. Create a super user.
     In django if you want to access admin page, you need to create an account first.
