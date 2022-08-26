@@ -72,6 +72,10 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     <ol>
     <li>Fork WeGroW Repo</li>
     <li>Clone the repo to your computer.</li>
+    <li>Navigate through the directory</li>
+     ```bash
+   cd SCL-2022-BitSlashers/SCL_Project
+    ```
     </ol>
 
 2. Create a Virtual Environment for the Project
@@ -126,13 +130,4 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     ```
 8. Do the Development and send us a PR referencing the issue.
  
- <!-- CONTRIBUTING -->
-## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
