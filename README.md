@@ -73,12 +73,17 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     <li>Fork WeGroW Repo</li>
     <li>Clone the repo to your computer.</li>
     <li>Navigate through the directory</li>
+   ```bash
+  
+   ```
     </ol>
 
-2. Create a Virtual Environment for the Project
+2. Navigate Through the directory Create a Virtual Environment for the Project
 
     In Windows
     ```bash
+    cd SCL-2022-BitSlashers/SCL_Project
+    
     python -m venv venv
     
     venv\Scripts\activate
@@ -86,6 +91,8 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
 
     In Ubuntu/MacOS
     ```bash
+    cd SCL-2022-BitSlashers/SCL_Project
+    
     python -m virtualenv venv
     
     source venv/bin/activate
