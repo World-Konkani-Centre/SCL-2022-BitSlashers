@@ -73,9 +73,6 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     <li>Fork WeGroW Repo</li>
     <li>Clone the repo to your computer.</li>
     <li>Navigate through the directory</li>
-   ```bash
-  
-   ```
     </ol>
 
 2. Navigate Through the directory Create a Virtual Environment for the Project
