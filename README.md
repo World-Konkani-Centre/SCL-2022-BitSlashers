@@ -20,11 +20,7 @@
     <a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/issues">Request Feature</a>
   </p>
   
-  <p class="text-center mb-3" align="center">
-<a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/18praneeth/sushiksha-website?style=for-the-badge"></a>
-<a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/18praneeth/sushiksha-website?style=for-the-badge"></a>
-<a href="https://github.com/World-Konkani-Centre/SCL-2022-BitSlashers/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/18praneeth/sushiksha-website?style=for-the-badge"></a>
-</p>
+
 </p>
 
 <!-- TABLE OF CONTENTS -->
