@@ -73,9 +73,6 @@ Hello, welcome to WeGroW. Extremely glad you’re here. You might have observed 
     <li>Fork WeGroW Repo</li>
     <li>Clone the repo to your computer.</li>
     <li>Navigate through the directory</li>
-    ```bash
-   `cd SCL-2022-BitSlashers/SCL_Project
-    ```
     </ol>
 
 2. Create a Virtual Environment for the Project
